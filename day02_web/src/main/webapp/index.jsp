@@ -13,7 +13,9 @@
 <body>
 <form action="account/findAccountById" method="post">
     输入id <input type="text" name="id"><br>
-    <input type="submit" value="确定">
+    <input type="submit" value="确定"><br>
+
+    <a href="account/findAll">查询</a>
 </form>
 </body>
 </html>

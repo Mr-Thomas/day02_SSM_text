@@ -23,6 +23,7 @@
     <!--事务管理器-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="comboPooledDataSource"></property>
+        
     </bean>
 
     <!--事务通知-->

@@ -6,6 +6,8 @@ import com.itheima.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("accountService")
 public class AccountServiceImpl implements AccountService {
 
@@ -15,5 +17,10 @@ public class AccountServiceImpl implements AccountService {
     public Account findAccountById(Integer id) {
         System.out.println("业务层:findAccountById执行了...");
         return accountDao.findAccountById(id);
+    }
+
+    @Override
+    public List<Account> findAll() {
+        return accountDao.findAll();
     }
 }

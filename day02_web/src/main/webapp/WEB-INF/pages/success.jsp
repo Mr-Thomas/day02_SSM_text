@@ -26,5 +26,9 @@
 			</tr>
 		</table>
 	</form>
+
+<c:forEach items="${list}" var="account" >
+	${account.name}
+</c:forEach>
 </body>
 </html>

@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @Controller
 @RequestMapping("/account")
@@ -21,6 +22,13 @@ public class AccountController {
 //        response.setContentType("text/html;charset=UTF-8");
         Account account = accountService.findAccountById(id);
         model.addAttribute("account",account);
+        return "success";
+    }
+    @RequestMapping("/findAll")
+    public String findAll(Model model){
+        List<Account> accounts = accountService.findAll();
+        System.out.println(accounts);
+        model.addAttribute("list",accounts);
         return "success";
     }
 }
